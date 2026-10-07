@@ -12,3 +12,16 @@ const cities = ["Muscat", "Salalah", "Sohar", "Nizwa", "Sur"];
 const target = "Nizwa";
 
 // your code here
+
+let found = false;
+
+for (let i = 0; i < cities.length; i++) {
+  if (cities[i] === target) {
+    console.log(`${target} is at index ${i}`);
+    found = true;
+  }
+}
+
+if (found === false) {
+  console.log(`${target} not found`);
+}

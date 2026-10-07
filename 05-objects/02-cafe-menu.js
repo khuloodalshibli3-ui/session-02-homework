@@ -19,3 +19,18 @@ const menu = [
 ];
 
 // your code here
+let cheapest = menu[0];
+
+console.log("Drinks:");
+
+for (let i = 0; i < menu.length; i++) {
+  if (menu[i].category === "drink") {
+    console.log(`- ${menu[i].name}: ${menu[i].price} baisa`);
+  }
+
+  if (menu[i].price < cheapest.price) {
+    cheapest = menu[i];
+  }
+}
+
+console.log(`Cheapest: ${cheapest.name} (${cheapest.price} baisa)`);
